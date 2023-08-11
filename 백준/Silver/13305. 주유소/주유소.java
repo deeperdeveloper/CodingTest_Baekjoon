@@ -4,8 +4,8 @@ import java.io.*;
 public class Main {
     
     public String solution(int n, int[] dis, int[] prices) {
-        long answer = 0L;
-        long cntMinPrice = prices[0];
+        long answer = 0L; //answer에 저장되는 정수값은 4byte를 초과하는 저장공간을 차지할 수 있으므로 long 형으로 선언
+        long cntMinPrice = prices[0]; //prices[0] 값 자체는 int형 타입 변수에 저장이 되지만, dis[i]와 곱한 결과물은 long 형 변수에 저장하므로 자동 타입 변환을 유도하기 위해서 prices[0] 값을 long 형 타입에 저장함.
         for(int i=0; i<dis.length; i++) {
             if(cntMinPrice > prices[i]) {
                 cntMinPrice = prices[i];
