@@ -4,8 +4,8 @@ import java.io.*;
 public class Main {
     
     public String solution(int n, int[] dis, int[] prices) {
-        int answer = 0;
-        int cntMinPrice = prices[0];
+        long answer = 0L;
+        long cntMinPrice = prices[0];
         for(int i=0; i<dis.length; i++) {
             if(cntMinPrice > prices[i]) {
                 cntMinPrice = prices[i];
