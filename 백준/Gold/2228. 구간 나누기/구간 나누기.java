@@ -3,6 +3,10 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
+//지금까지 푼 DP 문제 중 가장 난이도 있었음. 꼭 다시 풀어볼 것.
+//개인적으로 index 처리가 굉장히 까다로웠음.
+//board[i][j]에 값을 할당할 때, 꼭 먼저 board[i-1][j] 값을 board[i][j]에 먼저 할당하고 난 후에, 크기 비교하여 최댓값을 갱신해나가는 로직으로 적용해야 함.
+//    => board[rowLevel][j] = Math.max(board[rowLevel-1][j], board[k-2][j-1] + sums[rowLevel] - sums[j-1]) 로 바로 적용하면 오답.
 public class Main {
 
     static int n,m; //n개의 수,  m개의 구간의 갯수
